@@ -403,6 +403,10 @@ impl State {
         Self::with_params(&Params::default())
     }
 
+    pub fn words(&self) -> &[Word; 8] {
+        &self.words
+    }
+    
     fn with_params(params: &Params) -> Self {
         let mut state = Self {
             words: params.to_words(),
